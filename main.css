@@ -388,7 +388,7 @@ color: #fff;
   z-index: 1;
   align-items: center;
   height: 500px;
-  background-color: red;
+ 
   background-image: url(https://static.wixstatic.com/media/f60b07_ba31123f097b4977926129eb31fbdeac~mv2.png/v1/fill/w_1899,h_585,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/f60b07_ba31123f097b4977926129eb31fbdeac~mv2.png);
   background-size: cover;
   background-position: center;
@@ -419,7 +419,32 @@ color: #fff;
   font-size: 0.8rem;
 }
 
-.main-page__button {
+.main-page__link{
+  width: 270px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  display: block;
+  margin: 20px auto 50px;
+  
+}
+
+
+
+
+.main-page__link:hover {
+background-color: white;
+color: #011312;
+}
+/* .main-page__button {
   background-color: grey;
   border: none;
   color: white;
@@ -431,7 +456,7 @@ color: #fff;
   margin: 4px 2px;
   cursor: pointer;
   border: #fff solid 1px;
-}
+} */
 
 /* end of background with text and link */
 
@@ -750,6 +775,7 @@ i.home-product-item__like-icon-fill {
 /* shop teaware */
 .teaware {
   border-bottom: solid 1px rgba(0, 0, 0, 0.5);
+  padding-bottom:50px ;
 }
 
 .teaware__header {
@@ -781,6 +807,7 @@ i.home-product-item__like-icon-fill {
 
   position: relative;
   text-align: center;
+
 
 }
 
@@ -828,7 +855,7 @@ i.home-product-item__like-icon-fill {
 .teaware__product-name {
   display: inline-block;
   padding-top: 18px;
-  padding-bottom: 50px;
+  
   text-decoration: none;
   font-size: 1.6rem;
   color: #0e5955;
@@ -1142,7 +1169,7 @@ position: relative;
 
 }
 
-.shoptea__header{
+.shop__header{
 width: 100%;
 min-width: 1200px;
 height: 350px;
@@ -1153,39 +1180,42 @@ border-bottom: solid 1px rgba(0, 0, 0, 0.5);
 
 }
 
-.shoptea__header-text{
+.shop__header-text{
 width: 300px;
 padding-left: 20px;
 
 }
 
-.shoptea__header-text-title{
+.shop__header-text-title{
 font-size: 2.7rem;
 font-weight: 400;
 padding-top: 70px;
 }
 
-.shoptea__header-text-text{
+.shop__header-text-text{
 font-size: 1.6rem;
 font-weight: 200;
 
 }
 
-.shoptea__header-img{
+.shop__header-img{
 width: 450px;
 height: 240px;
-background-image: url(https://static.wixstatic.com/media/11062b_4a98c7e597b2475db01d435b3c9d7e72~mv2.jpg/v1/fill/w_546,h_277,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Tea%20Time.jpg);
+
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 border-radius: 5px;
-padding-left: 20px;
+margin-left: 30px;
 
+}
+.shop__header-img.shoptea__header-img{
+  background-image: url(https://static.wixstatic.com/media/11062b_4a98c7e597b2475db01d435b3c9d7e72~mv2.jpg/v1/fill/w_546,h_277,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Tea%20Time.jpg);
 }
 
 
 /* start shop tea body */
-.shoptea__body{
+.shop__body{
   width: 1200px;
   margin: 0 auto;
   padding: 30px 150px 80px 100px;
@@ -1194,7 +1224,7 @@ padding-left: 20px;
   gap: 24px;
 }
 
-.shoptea__body-filter{
+.shop__body-filter{
 
 }
 
@@ -1481,7 +1511,443 @@ font-weight:300 ;
 
 /* end of shop tea page */
 
+/* shop teaware page */
+.shop__header-img.shopteaware__header-img{
+  background-image: url(https://static.wixstatic.com/media/92cbbe_e78e36f871ee4df49264e7a3ea4252a6~mv2.jpg/v1/crop/x_0,y_165,w_500,h_255/fill/w_546,h_277,al_c,lg_1,q_80,enc_auto/data.jpg);
+}
 
+.teaware__product--price{
+  display: block;
+  padding-top: 12px;
+ 
+}
+/* end of shopteaware page */
+
+/* start of story page */
+.ourstory-page{
+  
+}
+
+.shop__header-img.story__page__header-img{
+  background-image: url(https://static.wixstatic.com/media/92cbbe_c0a7f9bff8d742fa8f26460d0633fbbd~mv2.jpg/v1/crop/x_0,y_669,w_1125,h_575/fill/w_546,h_277,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/IMG_7425.jpg);
+  
+}
+
+.story-page__body{
+
+}
+
+.story-owner{
+
+}
+
+.ourstory{
+display: flex;
+padding: 20px 200px;
+}
+
+.story-owner__img{
+
+}
+
+.story-owner-name{
+padding-top: 12px;
+text-align: center;
+font-style: italic;
+}
+
+.story-owner-name-name{
+font-weight: 500;
+
+}
+
+.story-owner-name-detail{
+
+}
+
+.story-para{
+padding: 30px 100px;
+
+
+}
+
+.story-para-text{
+font-size: 1.4rem;
+}
+
+.story-para-text:first-child:first-letter {
+  font-size: 3.6rem;
+  font-weight: 300;  
+  
+  
+  
+}
+.story-country{
+
+}
+
+.story-country__paragraph{
+
+}
+
+.story-country__paragraph-text{
+
+padding-bottom: 20px;
+}
+
+.story-country__img{
+
+}
+.story-country-detail{
+  text-align: center;
+  font-style: italic;
+}
+
+.shopnow__link{
+  width: 500px;
+  height: 40px;
+  background-color: #b83726;
+  border: 1px solid #333;
+  border-radius: 3px;
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  display: block;
+  margin: 20px auto 50px;
+  
+}
+
+
+.shopnow__link:hover {
+  background-color: white;
+  color: #011312;
+}
+
+/* end of story page */
+
+/* start of loyalty page */
+.loyalty-page{
+padding: 50px 100px;
+}
+
+.loyalty-page__header{
+  width: 1000px;
+  height: 300px;
+  margin: 0 auto;
+  background-image: url(https://static.wixstatic.com/media/11062b_afc56c8cc31c46eeabbec328b1a08736~mv2.jpeg/v1/fill/w_980,h_300,fp_0.50_0.50,q_80,enc_auto/11062b_afc56c8cc31c46eeabbec328b1a08736~mv2.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.loyalty-page__header-text{
+  color: #fff;
+}
+
+.loyalty-page__header-title{
+font-size: 2.8rem;
+font-weight: 400;
+}
+
+.loyalty-page__header-text{
+font-weight: 1.6rem;
+font-weight: 300;
+}
+
+.loyalty-page__header-link{
+  width: 200px;
+  height: 40px;
+  background-color: rgb(10, 51, 48);
+  border: 1px solid #333;
+  border-radius: 3px;
+  font-size: 1.4rem;
+  font-weight: 300;
+  
+  line-height: 40px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  display: block;
+  margin: 20px auto 50px;
+
+}
+
+
+.loyalty-page__header-link:hover {
+  background-color: rgba(10, 51, 48, 0.5);
+  color: white;
+}
+
+.loyalty-page__body{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  padding-top: 50px;
+}
+
+.loyalty-page__step{
+  width: 300px;
+  height: 400px;
+  
+  text-align: center;
+  border: solid 1px rgba(0, 0, 0, 0.3);
+}
+
+.loyalty-page__step-step{
+  display: block;
+  
+  font-size: 2rem;
+  font-weight: 500;
+  padding-top: 50px;
+}
+
+.loyalty-page__step-title{
+  font-size: 2.3rem;
+  font-weight: 400;
+  padding-top: 12px;
+
+}
+
+.loyalty-page__step-text{
+  font-size: 1.4rem;
+  padding-top: 12px;
+}
+/* end of loyalty page */
+
+/* start of blog page */
+.blog-page{
+
+}
+
+.blog-page__header{
+width: 100vw;
+height: 200px;
+background-image:url(https://i.pinimg.com/originals/60/2f/79/602f796e07a8fd3c8173c9602fcb8e6a.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+
+
+}
+
+.blog-page__header-para{
+display: flex;
+align-items: center;
+}
+
+.blog-page__header-title{
+flex: 1;
+text-align: end;
+padding-right: 100px;
+font-size: 4rem;
+font-weight: 400;
+color: #333;
+}
+
+.blog-page__header-text{
+flex: 1;
+
+}
+
+.blog-page__body{
+
+}
+
+.blog-page__body-searchbar{
+width: 1000px;
+margin: 20px auto;
+height:80px ;
+display: flex;
+justify-content: space-between;
+align-items: center;
+/* background-color: red; */
+}
+
+.blog-page__body-searchbar--link{
+display: block;
+text-decoration: none;
+font-size: 1.6rem;
+padding-left: 100px;
+}
+
+.blog-page__body-searchbar--search{
+display: block;
+font-size: 1.6rem;
+padding-right: 100px;
+}
+
+.blog-page__body-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  margin: 30px 250px;
+  gap: 24px;
+}
+
+.blog-page__body-grid-item{
+  position: relative;
+  text-align: center;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.3);
+}
+
+.blog-page__body-grid-item-link{
+  display: block;
+  text-decoration: none;
+  padding-top: 100%;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.blog-page__body-grid-name{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #0e5955;
+  text-align: start;
+}
+
+.blog-page__body-grid-text{
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-align: start;
+  padding-bottom: 20px;
+}
+    
+
+  
+/* end of blog page */
+
+/* start of contact page */
+
+.shop__header-img.contact-page__header-img{
+background-image: url(https://static.wixstatic.com/media/nsplsh_7779c21a4dd248ea9ee1aa872dee455a~mv2.jpg/v1/crop/x_0,y_1412,w_3435,h_1755/fill/w_546,h_277,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image%20by%20micheile%20dot%20com.jpg);
+}
+
+.contact-page__body{
+display: flex;
+padding-top: 50px;
+padding-bottom: 100px;
+}
+
+.contact-page__body--info{
+flex: 1;
+
+text-align: center;
+}
+
+.contact-page__body-title{
+  font-size: 2.3rem;
+  font-weight: 500;
+
+}
+
+.contact-contact{
+display: block;
+padding-top: 12px;
+}
+
+.contact-contact-social{
+display: flex;
+justify-content: center;
+padding-top: 12px;
+}
+
+.contact-contact-social-icon{
+  font-size: 1.6rem;
+padding-right: 12px;
+}
+
+.contact-page__body--contact{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+ 
+  align-items: center;
+}
+
+.contact-page__block{
+  padding-bottom: 6px;
+}
+
+
+.contact-page__input-half{
+  width: 225px;
+  height: 42px;
+  padding: 6px;
+  border: solid 1px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.5) transparent;
+
+}
+
+
+.contact-page__subject{
+  width: 450px;
+  height: 42px;
+  border: solid 1px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.5) transparent;
+}
+
+
+
+.contact-page__msg{
+  width: 450px;
+  height: 126px;
+  border: solid 1px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.5) transparent;
+}
+
+.contact-page__input-half:focus,
+.contact-page__subject:focus,
+.contact-page__msg:focus{
+  
+  outline: none;
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.contact-page__msg::placeholder {
+  
+  position: absolute;
+  top: 12px; 
+  left: 12px; 
+}
+
+.contact-page__submitlink{
+  width: 200px;
+  height: 40px;
+  background-color: rgb(10, 51, 48);
+  border: 1px solid #333;
+  border-radius: 3px;
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  display: block;
+  margin: 20px auto 50px;
+}
+
+
+
+.contact-page__submitlink:hover {
+  background-color: rgba(10, 51, 48, 0.5);
+  color: white;
+}
+/* end of contact page */
 /* footer */
 .footer{
   display: flex;
@@ -1512,7 +1978,7 @@ padding: 30px 30px;
 .footer__name-text{
   display: inline-block;
   font-size: 1.4rem;
-  padding-top: 20px;
+  
   
 }
 
@@ -1583,6 +2049,14 @@ font-weight: 400;
 }
 /* end of footer */
 
+.content {
+      display: none;
+      
+    }
+
+    .content.active {
+      display: block;
+    }
 @keyframes fadeIn {
   from {
     opacity: 0;

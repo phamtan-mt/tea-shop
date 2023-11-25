@@ -20,13 +20,13 @@
 
         <navbar class="navbar">
             <ul class="menu">
-                <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
-                <li class="menu-item"><a href="#" class="menu-link">Shop Tea</a></li>
-                <li class="menu-item"><a href="#" class="menu-link">Shop Teaware</a></li>
-                <li class="menu-item"><a href="#" class="menu-link">Our Story</a></li>
-                <li class="menu-item"> <a href="#" class="menu-link">Loyalty Program</a></li>
-                <li class="menu-item"><a href="#" class="menu-link">Blog</a></li>
-                <li class="menu-item"><a href="#" class="menu-link">Contact</a></li>
+                <li class="menu-item"><a href="#" class="menu-link" onclick="showContent('Home')">Home</a></li>
+                <li class="menu-item"><a href="#" class="menu-link" onclick="showContent('Shop Tea')">Shop Tea</a></li>
+                <li class="menu-item"><a href="#" class="menu-link" onclick="showContent('Shop Teaware')">Shop Teaware</a></li>
+                <li class="menu-item"><a href="#" class="menu-link" onclick="showContent('Our Story')">Our Story</a></li>
+                <li class="menu-item"> <a href="#" class="menu-link" onclick="showContent('Loyalty Program')">Loyalty Program</a></li>
+                <li class="menu-item"><a href="#" class="menu-link" onclick="showContent('Blog')">Blog</a></li>
+                <li class="menu-item"><a href="#" class="menu-link" onclick="showContent('Contact')">Contact</a></li>
             </ul>
         </navbar>
 
@@ -36,128 +36,138 @@
                 <a href="#" class="user__login-text" onclick="openLoginForm()">Log in</a>
                 <a href="#" class="user__login-text" onclick="openSignupForm()">Sign up</a>
                 <!-- modal layout -->
-    <div class="modal" id="modal">
-        <div class="modal__overlay" onclick="closeModal()">
+                <div class="modal" id="modal">
+                    <div class="modal__overlay" onclick="closeModal()">
 
-        </div>
-        <div class="modal__body">
-
-            <!-- login form -->
-            <div class="auth-form auth-form--login">
-                <div class="auth-form__container">
-                    <div class="auth-form__header">
-                        <h3 class="auth-form__heading">
-                            Log in
-                        </h3>
-                        <span class="auth-form__switch-btn" onclick="toggleForm()">
-                            Register
-                        </span>
                     </div>
+                    <div class="modal__body">
 
-                    <div class="auth-form__form">
-                        <div class="auth-form__group">
-                            <input type="text" class="auth-form__input" placeholder="Your email/ User name">
+                        <!-- login form -->
+                        <div class="auth-form auth-form--login">
+                            <div class="auth-form__container">
+                                <div class="auth-form__header">
+                                    <h3 class="auth-form__heading">
+                                        Log in
+                                    </h3>
+                                    <span class="auth-form__switch-btn" onclick="toggleForm()">
+                                        Register
+                                    </span>
+                                </div>
+
+                                <div class="auth-form__form">
+                                    <div class="auth-form__group">
+                                        <input type="text" class="auth-form__input" placeholder="Your email/ User name">
+                                    </div>
+                                    <div class="auth-form__group">
+                                        <input type="password" class="auth-form__input" placeholder="Your password">
+                                    </div>
+
+                                </div>
+
+                                <div class="auth-form__aside">
+                                    <div class="auth-form__help">
+                                        <a href="" class="auth-form__help-link auth-form__help-forgot">Forgot your
+                                            password</a>
+                                        <span class="auth-form__help-sepa"></span>
+                                        <a href="" class="auth-form__help-link">Need help?</a>
+                                    </div>
+                                    <p class="auth-form__register-text" onclick="toggleForm()">Don't have an account
+                                        yet? Click
+                                        <a href="#" class="auth-form__register-link"
+                                            onclick="openForm('signup')">here</a>
+                                        to register
+                                    </p>
+                                </div>
+
+                                <div class="auth-form__controls">
+                                    <button class="btn btn--normal auth-form__controls-back" onclick="closeModal()">Go
+                                        back</button>
+                                    <button class="btn btn__pri">Log in</button>
+                                </div>
+                            </div>
+
+
+                            <div class="auth-form__socials">
+                                <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                                    <i class="auth-form__socials-icon fa-brands fa-facebook"></i>
+                                    <span class="auth-form__socials-title">Connect us with Facebook</span>
+                                </a>
+                                <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                                    <i class="auth-form__socials-icon fa-brands fa-google"></i>
+                                    <span class="auth-form__socials-title">Connect us with Google</span>
+
+                                </a>
+                            </div>
+
                         </div>
-                        <div class="auth-form__group">
-                            <input type="password" class="auth-form__input" placeholder="Your password">
+
+                        <div class="auth-form auth-form--signup">
+                            <div class="auth-form__container">
+                                <div class="auth-form__header">
+                                    <h3 class="auth-form__heading">
+                                        Register
+                                    </h3>
+                                    <span class="auth-form__switch-btn" onclick="toggleForm()">
+                                        Log in
+                                    </span>
+                                </div>
+
+                                <div class="auth-form__form">
+                                    <div class="auth-form__group">
+                                        <input type="text" class="auth-form__input" placeholder="Your email">
+                                    </div>
+                                    <div class="auth-form__group">
+                                        <input type="password" class="auth-form__input" placeholder="Password">
+                                    </div>
+                                    <div class="auth-form__group">
+                                        <input type="password" class="auth-form__input" placeholder="Password again">
+                                    </div>
+                                </div>
+
+                                <div class="auth-form__aside">
+                                    <p class="auth-form__policy-text">
+                                        By register, you agree with us about <a href=""
+                                            class="auth-form__policy-link">Terms of
+                                            service</a> &
+                                        <a href="" class="auth-form__policy-link">Privacy policy</a>
+                                    </p>
+                                    <p class="auth-form__register-text" onclick="toggleForm()">If you already have an
+                                        account, click
+                                        <a href="#" class="auth-form__register-link"
+                                            onclick="openForm('signup')">here</a>
+                                        to log in
+                                    </p>
+
+                                </div>
+
+                                <div class="auth-form__controls">
+                                    <button class="btn btn--normal auth-form__controls-back" onclick="closeModal()">Go
+                                        back</button>
+                                    <button class="btn btn__pri">Register</button>
+                                </div>
+                            </div>
+
+
+                            <div class="auth-form__socials">
+                                <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                                    <i class="auth-form__socials-icon fa-brands fa-facebook"></i>
+                                    <span class="auth-form__socials-title">Connect us with Facebook</span>
+                                </a>
+                                <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                                    <i class="auth-form__socials-icon fa-brands fa-google"></i>
+                                    <span class="auth-form__socials-title">Connect us with Google</span>
+                                </a>
+                            </div>
+
                         </div>
-                        
+
+
+
                     </div>
 
-                    <div class="auth-form__aside">
-                        <div class="auth-form__help">
-                            <a href="" class="auth-form__help-link auth-form__help-forgot">Forgot your password</a>
-                            <span class="auth-form__help-sepa"></span>
-                            <a href="" class="auth-form__help-link">Need help?</a>
-                        </div>
-                      <p class="auth-form__register-text" onclick="toggleForm()">Don't have an account yet? Click 
-                        <a href="#" class="auth-form__register-link" onclick="openForm('signup')">here</a>
-                        to register</p>
-                    </div>
 
-                    <div class="auth-form__controls">
-                        <button class="btn btn--normal auth-form__controls-back" onclick="closeModal()">Go back</button>
-                        <button class="btn btn__pri">Log in</button>
-                    </div>
                 </div>
-
-
-                <div class="auth-form__socials">
-                    <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
-                        <i class="auth-form__socials-icon fa-brands fa-facebook"></i>
-                        <span class="auth-form__socials-title">Connect us with Facebook</span>
-                    </a>
-                    <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
-                        <i class="auth-form__socials-icon fa-brands fa-google"></i>
-                        <span class="auth-form__socials-title">Connect us with Google</span>
-                        
-                    </a>
-                </div>
-
-            </div>
-
-           <div class="auth-form auth-form--signup">
-                <div class="auth-form__container">
-                    <div class="auth-form__header">
-                        <h3 class="auth-form__heading">
-                            Register
-                        </h3>
-                        <span class="auth-form__switch-btn" onclick="toggleForm()">
-                            Log in
-                        </span>
-                    </div>
-
-                    <div class="auth-form__form">
-                        <div class="auth-form__group">
-                            <input type="text" class="auth-form__input" placeholder="Your email">
-                        </div>
-                        <div class="auth-form__group">
-                            <input type="password" class="auth-form__input" placeholder="Password">
-                        </div>
-                        <div class="auth-form__group">
-                            <input type="password" class="auth-form__input" placeholder="Password again">
-                        </div>
-                    </div>
-
-                    <div class="auth-form__aside">
-                        <p class="auth-form__policy-text">
-                            By register, you agree with us about <a href="" class="auth-form__policy-link">Terms of
-                                service</a> &
-                            <a href="" class="auth-form__policy-link">Privacy policy</a>
-                        </p>
-                        <p class="auth-form__register-text" onclick="toggleForm()">If you already have an account, click
-                            <a href="#" class="auth-form__register-link" onclick="openForm('signup')">here</a>
-                            to log in</p>
-                      
-                    </div>
-
-                    <div class="auth-form__controls">
-                        <button class="btn btn--normal auth-form__controls-back" onclick="closeModal()">Go back</button>
-                        <button class="btn btn__pri">Register</button>
-                    </div>
-                </div>
-
-
-                <div class="auth-form__socials">
-                    <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
-                        <i class="auth-form__socials-icon fa-brands fa-facebook"></i>
-                        <span class="auth-form__socials-title">Connect us with Facebook</span>
-                    </a>
-                    <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
-                        <i class="auth-form__socials-icon fa-brands fa-google"></i>
-                        <span class="auth-form__socials-title">Connect us with Google</span>
-                    </a>
-                </div>
-
-            </div> 
-
-
-
-        </div>
-        
-
-    </div>
-    <!-- end of modal layout -->
+                <!-- end of modal layout -->
             </div>
 
             <div class="user__bag">
@@ -183,8 +193,8 @@
     </header>
 
     <!-- end of header -->
-
-    <!-- background with text and link -->
+<div id="Home" class="home content active">
+  <!-- background with text and link -->
     <div class="main-page">
         <div class="main-page-text">
             <h1 class="main-page-text-title">GET COZY</h1>
@@ -192,7 +202,7 @@
             <pre class="main-page-text-content">A calming and soothing blend of chamomile 
          flowers, lavender flowers, lemon verbena,
     spearmint, and more</pre>
-            <button><a href="#" class="main-page__button">Shop now</a></button>
+           <a href="#" class="main-page__link">Shop now</a>
         </div>
     </div>
 
@@ -241,8 +251,7 @@
 
 
     <!-- end of seasonal trend -->
-
-    <!-- story part -->
+  <!-- story part -->
     <div class="story-page">
         <div class="story-page-text">
             <h2 class="story-page-text-title">Bring home the
@@ -342,8 +351,7 @@
         </div>
     </div>
     <!-- end of news -->
-
-    <!-- start of ritual part -->
+   <!-- start of ritual part -->
 
     <div class="ritual">
         <h2 class="ritual__title">Create your wellness daily ritual</h2>
@@ -393,41 +401,53 @@
             <div class="learn__gallery-item">
                 <a href="#" class="learn__gallery-item-link"
                     style="background-image: url(https://static.wixstatic.com/media/nsplsh_a082e75541a243a885c3e103a5ef3d4d~mv2.jpg/v1/fill/w_304,h_228,fp_0.50_0.50,q_90,enc_auto/nsplsh_a082e75541a243a885c3e103a5ef3d4d~mv2.jpg);"></a>
-                
-                <a href="#" class="learn__gallery-item-name">Fight Back Against Seasonal Allergies: Tips and Tricks for a Clearer Spring</a>
+
+                <a href="#" class="learn__gallery-item-name">Fight Back Against Seasonal Allergies: Tips and Tricks for
+                    a Clearer Spring</a>
 
             </div>
-          <div class="learn__gallery-item">
+            <div class="learn__gallery-item">
                 <a href="#" class="learn__gallery-item-link"
                     style="background-image: url(https://static.wixstatic.com/media/11062b_4a98c7e597b2475db01d435b3c9d7e72~mv2.jpg/v1/fill/w_304,h_228,fp_0.50_0.50,q_90,enc_auto/11062b_4a98c7e597b2475db01d435b3c9d7e72~mv2.jpg);"></a>
-                
+
                 <a href="#" class="learn__gallery-item-name">Herbal Tea: A Calming Solution</a>
 
             </div>
-          <div class="learn__gallery-item">
+            <div class="learn__gallery-item">
                 <a href="#" class="learn__gallery-item-link"
                     style="background-image: url(https://static.wixstatic.com/media/92cbbe_5a71947ee7804ddd8f366fd3a46d15b3~mv2.jpg/v1/fill/w_303,h_228,fp_0.50_0.50,q_90,enc_auto/92cbbe_5a71947ee7804ddd8f366fd3a46d15b3~mv2.jpg);"></a>
-                
+
                 <a href="#" class="learn__gallery-item-name">The Wonders of Ginger Tea</a>
 
             </div>
         </div>
     </div>
     <!-- end of learn-page -->
+</div>
+    
+
+    
+
+   
 
     <!-- Shop tea page -->
-    <div class="shoptea">
-        <div class="shoptea__header">
-            <div class="shoptea__header-text">
-                <h2 class="shoptea__header-text-title">
+    <div id="Shop Tea" class="shop shoptea content">
+        <div class="shop__header shoptea__header">
+            <div class="shop__header-text shoptea__header-text">
+                <h2 class="shop__header-text-title shoptea__header-text-title">
                     Shop Sabinea Tea
-                    </h2>
-                    <p class="shoptea__header-text-text">Fresh, fragrant, delicious, and guaranteed to delight the senses. </p>
+                </h2>
+                <p class="shop__header-text-text shoptea__header-text-text">
+                    Fresh, fragrant, delicious, and guaranteed to delight the senses.
+                </p>
             </div>
-            <div class="shoptea__header-img"></div>
+            <div class="shop__header-img shoptea__header-img">
+
+            </div>
         </div>
-        <div class="shoptea__body">
-            <div class="shoptea__body-filter">
+        <div class="shop__body shoptea__body">
+            <div class="shop__body-filter shoptea__body-filter">
+
                 <h2 class="filter__heading">Filter by</h2>
                 <div class="filter__category">
                     <div class="filter__category-heading">
@@ -456,529 +476,948 @@
                     </div>
                     <input type="range" class="filter__price-range" min="0" max="1000">
                 </div>
-                
+
+
             </div>
-            <div class="shoptea__body-product">
+            <div class="shop__body-product shoptea__body-product">
+
+
+                <div class="home-product-item">
+
+                    <a href="#" class="home-product-item__img"
+                        style="background-image: url(https://static.wixstatic.com/media/f60b07_e77a244105cf457e83cd11c75adae9e8~mv2.jpg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/f60b07_e77a244105cf457e83cd11c75adae9e8~mv2.jpg);"></a>
+                    <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
+                    <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"> 696 Kc</span>
+                        <span class="home-product-item__price-new"> 969 Kc</span>
+                    </div>
+                    <div class="home-product-item__action">
+                        <span class="home-product-item__like home-product-item__like--liked">
+                            <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
+                            <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
+                        </span>
+
+                        <div class="home-product-item__rating">
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <span class="home-product-item__sold">69 sold</span>
+
+
+                    </div>
+                    <div class="home-product-item__origin">
+                        <span class="home-product-item__brand">Luxury</span>
+                        <span class="home-product-item__origin-country">Vietnam</span>
+                    </div>
+                    <div class="home-product-item__favourite">
+                        <i class="fa-solid fa-check"></i>
+                        Favourited
+                    </div>
+                    <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent">10%</span>
+                        <span class="home-product-item__sale-off-label">DISCOUNT</span>
+                    </div>
+                </div>
+
+
+                <div class="home-product-item">
+
+                    <a href="#" class="home-product-item__img"
+                        style="background-image: url(https://static.wixstatic.com/media/f60b07_7ac36a0e92c34361abf58559ff1975e7~mv2.jpg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/f60b07_7ac36a0e92c34361abf58559ff1975e7~mv2.jpg);"></a>
+                    <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
+                    <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"> 696 Kc</span>
+                        <span class="home-product-item__price-new"> 969 Kc</span>
+                    </div>
+                    <div class="home-product-item__action">
+                        <span class="home-product-item__like home-product-item__like--liked">
+                            <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
+                            <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
+                        </span>
+
+                        <div class="home-product-item__rating">
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <span class="home-product-item__sold">69 sold</span>
+
+
+                    </div>
+                    <div class="home-product-item__origin">
+                        <span class="home-product-item__brand">Luxury</span>
+                        <span class="home-product-item__origin-country">Vietnam</span>
+                    </div>
+                    <div class="home-product-item__favourite">
+                        <i class="fa-solid fa-check"></i>
+                        Favourited
+                    </div>
+                    <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent">10%</span>
+                        <span class="home-product-item__sale-off-label">DISCOUNT</span>
+                    </div>
+                </div>
+
+
+                <div class="home-product-item">
+
+                    <a href="#" class="home-product-item__img"
+                        style="background-image: url(https://static.wixstatic.com/media/f60b07_6d2a1e66dda242ed81a65317a88be103~mv2.jpg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/f60b07_6d2a1e66dda242ed81a65317a88be103~mv2.jpg);"></a>
+                    <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
+                    <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"> 696 Kc</span>
+                        <span class="home-product-item__price-new"> 969 Kc</span>
+                    </div>
+                    <div class="home-product-item__action">
+                        <span class="home-product-item__like home-product-item__like--liked">
+                            <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
+                            <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
+                        </span>
+
+                        <div class="home-product-item__rating">
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <span class="home-product-item__sold">69 sold</span>
+
+
+                    </div>
+                    <div class="home-product-item__origin">
+                        <span class="home-product-item__brand">Luxury</span>
+                        <span class="home-product-item__origin-country">Vietnam</span>
+                    </div>
+                    <div class="home-product-item__favourite">
+                        <i class="fa-solid fa-check"></i>
+                        Favourited
+                    </div>
+                    <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent">10%</span>
+                        <span class="home-product-item__sale-off-label">DISCOUNT</span>
+                    </div>
+                </div>
+
+
+                <div class="home-product-item">
+
+                    <a href="#" class="home-product-item__img"
+                        style="background-image: url(https://static.wixstatic.com/media/92cbbe_0356016ce8ab4f148b06e1d0bf4bd2bf~mv2.jpeg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_0356016ce8ab4f148b06e1d0bf4bd2bf~mv2.jpeg);"></a>
+                    <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
+                    <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"> 696 Kc</span>
+                        <span class="home-product-item__price-new"> 969 Kc</span>
+                    </div>
+                    <div class="home-product-item__action">
+                        <span class="home-product-item__like home-product-item__like--liked">
+                            <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
+                            <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
+                        </span>
+
+                        <div class="home-product-item__rating">
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <span class="home-product-item__sold">69 sold</span>
+
+
+                    </div>
+                    <div class="home-product-item__origin">
+                        <span class="home-product-item__brand">Luxury</span>
+                        <span class="home-product-item__origin-country">Vietnam</span>
+                    </div>
+                    <div class="home-product-item__favourite">
+                        <i class="fa-solid fa-check"></i>
+                        Favourited
+                    </div>
+                    <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent">10%</span>
+                        <span class="home-product-item__sale-off-label">DISCOUNT</span>
+                    </div>
+                </div>
+
+
+                <div class="home-product-item">
+
+                    <a href="#" class="home-product-item__img"
+                        style="background-image: url(https://static.wixstatic.com/media/f60b07_320f2dc913104921a3d2972593ad8cef~mv2.png/v1/fill/w_281,h_281,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f60b07_320f2dc913104921a3d2972593ad8cef~mv2.png);"></a>
+                    <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
+                    <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"> 696 Kc</span>
+                        <span class="home-product-item__price-new"> 969 Kc</span>
+                    </div>
+                    <div class="home-product-item__action">
+                        <span class="home-product-item__like home-product-item__like--liked">
+                            <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
+                            <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
+                        </span>
+
+                        <div class="home-product-item__rating">
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <span class="home-product-item__sold">69 sold</span>
+
+
+                    </div>
+                    <div class="home-product-item__origin">
+                        <span class="home-product-item__brand">Luxury</span>
+                        <span class="home-product-item__origin-country">Vietnam</span>
+                    </div>
+                    <div class="home-product-item__favourite">
+                        <i class="fa-solid fa-check"></i>
+                        Favourited
+                    </div>
+                    <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent">10%</span>
+                        <span class="home-product-item__sale-off-label">DISCOUNT</span>
+                    </div>
+                </div>
+
+
+                <div class="home-product-item">
+
+                    <a href="#" class="home-product-item__img"
+                        style="background-image: url(https://static.wixstatic.com/media/92cbbe_30eaf9333372401a84ad58c6695a0837~mv2.jpg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_30eaf9333372401a84ad58c6695a0837~mv2.jpg);"></a>
+                    <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
+                    <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"> 696 Kc</span>
+                        <span class="home-product-item__price-new"> 969 Kc</span>
+                    </div>
+                    <div class="home-product-item__action">
+                        <span class="home-product-item__like home-product-item__like--liked">
+                            <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
+                            <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
+                        </span>
+
+                        <div class="home-product-item__rating">
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <span class="home-product-item__sold">69 sold</span>
+
+
+                    </div>
+                    <div class="home-product-item__origin">
+                        <span class="home-product-item__brand">Luxury</span>
+                        <span class="home-product-item__origin-country">Vietnam</span>
+                    </div>
+                    <div class="home-product-item__favourite">
+                        <i class="fa-solid fa-check"></i>
+                        Favourited
+                    </div>
+                    <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent">10%</span>
+                        <span class="home-product-item__sale-off-label">DISCOUNT</span>
+                    </div>
+                </div>
+
+
+                <div class="home-product-item">
+
+                    <a href="#" class="home-product-item__img"
+                        style="background-image: url(https://static.wixstatic.com/media/92cbbe_a541940c67b545faaf7407f2dc3963bc~mv2.jpg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_a541940c67b545faaf7407f2dc3963bc~mv2.jpg);"></a>
+                    <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
+                    <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"> 696 Kc</span>
+                        <span class="home-product-item__price-new"> 969 Kc</span>
+                    </div>
+                    <div class="home-product-item__action">
+                        <span class="home-product-item__like home-product-item__like--liked">
+                            <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
+                            <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
+                        </span>
+
+                        <div class="home-product-item__rating">
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <span class="home-product-item__sold">69 sold</span>
+
+
+                    </div>
+                    <div class="home-product-item__origin">
+                        <span class="home-product-item__brand">Luxury</span>
+                        <span class="home-product-item__origin-country">Vietnam</span>
+                    </div>
+                    <div class="home-product-item__favourite">
+                        <i class="fa-solid fa-check"></i>
+                        Favourited
+                    </div>
+                    <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent">10%</span>
+                        <span class="home-product-item__sale-off-label">DISCOUNT</span>
+                    </div>
+                </div>
+
+
+                <div class="home-product-item">
+
+                    <a href="#" class="home-product-item__img"
+                        style="background-image: url(https://static.wixstatic.com/media/92cbbe_d5c1f333bef44a77ab184682164ee280~mv2.jpg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_d5c1f333bef44a77ab184682164ee280~mv2.jpg);"></a>
+                    <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
+                    <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"> 696 Kc</span>
+                        <span class="home-product-item__price-new"> 969 Kc</span>
+                    </div>
+                    <div class="home-product-item__action">
+                        <span class="home-product-item__like home-product-item__like--liked">
+                            <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
+                            <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
+                        </span>
+
+                        <div class="home-product-item__rating">
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <span class="home-product-item__sold">69 sold</span>
+
+
+                    </div>
+                    <div class="home-product-item__origin">
+                        <span class="home-product-item__brand">Luxury</span>
+                        <span class="home-product-item__origin-country">Vietnam</span>
+                    </div>
+                    <div class="home-product-item__favourite">
+                        <i class="fa-solid fa-check"></i>
+                        Favourited
+                    </div>
+                    <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent">10%</span>
+                        <span class="home-product-item__sale-off-label">DISCOUNT</span>
+                    </div>
+                </div>
+
+
+                <div class="home-product-item">
+
+                    <a href="#" class="home-product-item__img"
+                        style="background-image: url(https://static.wixstatic.com/media/92cbbe_6812fb3e48ff4fa2947e878313024a60~mv2.jpg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_6812fb3e48ff4fa2947e878313024a60~mv2.jpg);"></a>
+                    <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
+                    <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"> 696 Kc</span>
+                        <span class="home-product-item__price-new"> 969 Kc</span>
+                    </div>
+                    <div class="home-product-item__action">
+                        <span class="home-product-item__like home-product-item__like--liked">
+                            <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
+                            <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
+                        </span>
+
+                        <div class="home-product-item__rating">
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <span class="home-product-item__sold">69 sold</span>
+
+
+                    </div>
+                    <div class="home-product-item__origin">
+                        <span class="home-product-item__brand">Luxury</span>
+                        <span class="home-product-item__origin-country">Vietnam</span>
+                    </div>
+                    <div class="home-product-item__favourite">
+                        <i class="fa-solid fa-check"></i>
+                        Favourited
+                    </div>
+                    <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent">10%</span>
+                        <span class="home-product-item__sale-off-label">DISCOUNT</span>
+                    </div>
+                </div>
+
+
+                <div class="home-product-item">
+
+                    <a href="#" class="home-product-item__img"
+                        style="background-image: url(https://static.wixstatic.com/media/92cbbe_e333cca1f95147088ae58329e2ef17ad~mv2.jpg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_e333cca1f95147088ae58329e2ef17ad~mv2.jpg);"></a>
+                    <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
+                    <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"> 696 Kc</span>
+                        <span class="home-product-item__price-new"> 969 Kc</span>
+                    </div>
+                    <div class="home-product-item__action">
+                        <span class="home-product-item__like home-product-item__like--liked">
+                            <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
+                            <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
+                        </span>
+
+                        <div class="home-product-item__rating">
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <span class="home-product-item__sold">69 sold</span>
+
+
+                    </div>
+                    <div class="home-product-item__origin">
+                        <span class="home-product-item__brand">Luxury</span>
+                        <span class="home-product-item__origin-country">Vietnam</span>
+                    </div>
+                    <div class="home-product-item__favourite">
+                        <i class="fa-solid fa-check"></i>
+                        Favourited
+                    </div>
+                    <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent">10%</span>
+                        <span class="home-product-item__sale-off-label">DISCOUNT</span>
+                    </div>
+                </div>
+
+
+                <div class="home-product-item">
+
+                    <a href="#" class="home-product-item__img"
+                        style="background-image: url(https://static.wixstatic.com/media/92cbbe_e63b68959a614d63b32d69b98d970bd9~mv2.jpg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_e63b68959a614d63b32d69b98d970bd9~mv2.jpg);"></a>
+                    <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
+                    <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"> 696 Kc</span>
+                        <span class="home-product-item__price-new"> 969 Kc</span>
+                    </div>
+                    <div class="home-product-item__action">
+                        <span class="home-product-item__like home-product-item__like--liked">
+                            <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
+                            <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
+                        </span>
+
+                        <div class="home-product-item__rating">
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <span class="home-product-item__sold">69 sold</span>
+
+
+                    </div>
+                    <div class="home-product-item__origin">
+                        <span class="home-product-item__brand">Luxury</span>
+                        <span class="home-product-item__origin-country">Vietnam</span>
+                    </div>
+                    <div class="home-product-item__favourite">
+                        <i class="fa-solid fa-check"></i>
+                        Favourited
+                    </div>
+                    <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent">10%</span>
+                        <span class="home-product-item__sale-off-label">DISCOUNT</span>
+                    </div>
+                </div>
+
+
+                <div class="home-product-item">
+
+                    <a href="#" class="home-product-item__img"
+                        style="background-image: url(https://static.wixstatic.com/media/92cbbe_b51daf4feafb4a52a9cb3bda78bec6c1~mv2.jpg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_b51daf4feafb4a52a9cb3bda78bec6c1~mv2.jpg);"></a>
+                    <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
+                    <div class="home-product-item__price">
+                        <span class="home-product-item__price-old"> 696 Kc</span>
+                        <span class="home-product-item__price-new"> 969 Kc</span>
+                    </div>
+                    <div class="home-product-item__action">
+                        <span class="home-product-item__like home-product-item__like--liked">
+                            <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
+                            <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
+                        </span>
+
+                        <div class="home-product-item__rating">
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <span class="home-product-item__sold">69 sold</span>
+
+
+                    </div>
+                    <div class="home-product-item__origin">
+                        <span class="home-product-item__brand">Luxury</span>
+                        <span class="home-product-item__origin-country">Vietnam</span>
+                    </div>
+                    <div class="home-product-item__favourite">
+                        <i class="fa-solid fa-check"></i>
+                        Favourited
+                    </div>
+                    <div class="home-product-item__sale-off">
+                        <span class="home-product-item__sale-off-percent">10%</span>
+                        <span class="home-product-item__sale-off-label">DISCOUNT</span>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- end of shop tea page -->
+
+    <!-- shop teaware page -->
+    <div id="Shop Teaware" class="shop shopteaware content">
+        <div class="shop__header shopteaware__header">
+            <div class="shop__header-text shopteaware__header-text">
+                <h2 class="shop__header-text-title shopteaware__header-text-title">
+
+                    Shop Teaware
+
+                </h2>
+                <p class="shop__header-text-text shopteaware__header-text-text">
+                    Brew and serve your tea in style with the Sabinea Teaware Collection
+                </p>
+            </div>
+            <div class="shop__header-img shopteaware__header-img">
+
+            </div>
+        </div>
+        <div class="shop__body shopteaware__body">
+            <div class="shop__body-filter shopteaware__body-filter">
+
+
+
+
+            </div>
+            <div class="shop__body-product shoptea__body-product">
+
+
+                <div class="teaware__product">
+                    <div class="teaware__product-link">
+                        <a href="#" class="ss-trend__product-item ss-trend__product-item--origin"
+                            style="background-image: url(https://static.wixstatic.com/media/92cbbe_5b49a2ecaa1d4784957cbbcffaddbdc6~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_5b49a2ecaa1d4784957cbbcffaddbdc6~mv2.jpg);"></a>
+                        <a href="#" class="ss-trend__product-item ss-trend__product-item--alt"
+                            style="background-image: url(https://static.wixstatic.com/media/92cbbe_4b6f7b3cfc0f4a0b9582dfde7d5e7efa~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_4b6f7b3cfc0f4a0b9582dfde7d5e7efa~mv2.jpg);"></a>
+                    </div>
+
+                    <a href="#" class="teaware__product-name">Allegedly Mug with Color Inside</a>
+                    <span class="teaware__product--price">$15.00</span>
+
+                </div>
+                <div class="teaware__product">
+                    <div class="teaware__product-link">
+                        <a href="#" class="ss-trend__product-item ss-trend__product-item--origin"
+                            style="background-image: url(https://static.wixstatic.com/media/f60b07_1a2f3e7795d74d6a92f41213d21d0a82~mv2.png/v1/fill/w_420,h_420,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f60b07_1a2f3e7795d74d6a92f41213d21d0a82~mv2.png);"></a>
+                        <a href="#" class="ss-trend__product-item ss-trend__product-item--alt"
+                            style="background-image: url(https://static.wixstatic.com/media/92cbbe_e78e36f871ee4df49264e7a3ea4252a6~mv2.jpg/v1/fill/w_344,h_420,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_e78e36f871ee4df49264e7a3ea4252a6~mv2.jpg);"></a>
+                    </div>
+
+                    <a href="#" class="teaware__product-name">Piper™ Rose Gold Press Pot</a>
+                    <span class="teaware__product--price">$40.00</span>
+
+                </div>
+                <div class="teaware__product">
+                    <div class="teaware__product-link">
+                        <a href="#" class="ss-trend__product-item ss-trend__product-item--origin"
+                            style="background-image: url(https://static.wixstatic.com/media/92cbbe_798dd1a7b62349c5ab6fbe34761e5d79~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_798dd1a7b62349c5ab6fbe34761e5d79~mv2.jpg);"></a>
+                        <a href="#" class="ss-trend__product-item ss-trend__product-item--alt"
+                            style="background-image: url(https://static.wixstatic.com/media/92cbbe_f956b98845c045e2aababa6836f78e31~mv2.png/v1/fill/w_520,h_293,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/92cbbe_f956b98845c045e2aababa6836f78e31~mv2.png);"></a>
+                    </div>
+
+                    <a href="#" class="teaware__product-name">Thermo Glass Tea Pot 32 Fl Oz</a>
+                    <span class="teaware__product--price">$85.20</span>
+
+                </div>
+                <div class="teaware__product">
+                    <div class="teaware__product-link">
+                        <a href="#" class="ss-trend__product-item ss-trend__product-item--origin"
+                            style="background-image: url(https://static.wixstatic.com/media/f60b07_36058376a08e409aaf1fe2dca1ec5830~mv2.png/v1/fill/w_420,h_420,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f60b07_36058376a08e409aaf1fe2dca1ec5830~mv2.png);"></a>
+                        <a href="#" class="ss-trend__product-item ss-trend__product-item--alt"
+                            style="background-image: url(https://static.wixstatic.com/media/92cbbe_c1dfc7b1b186418f943b95013f661acd~mv2.jpg/v1/fill/w_280,h_420,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_c1dfc7b1b186418f943b95013f661acd~mv2.jpg);"></a>
+                    </div>
+
+                    <a href="#" class="teaware__product-name">Jade Leaves Tea Tumbler</a>
+                    <span class="teaware__product--price">$69.00</span>
+
+                </div>
+                <div class="teaware__product">
+                    <div class="teaware__product-link">
+                        <a href="#" class="ss-trend__product-item ss-trend__product-item--origin"
+                            style="background-image: url(https://static.wixstatic.com/media/92cbbe_0d89c75053544d54a4b7f27bdb3bdc81~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_0d89c75053544d54a4b7f27bdb3bdc81~mv2.jpg);"></a>
+                        <a href="#" class="ss-trend__product-item ss-trend__product-item--alt"
+                            style="background-image: url(https://static.wixstatic.com/media/92cbbe_c26b24409c844b27853c2420e55d3c97~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_c26b24409c844b27853c2420e55d3c97~mv2.jpg);"></a>
+                    </div>
+
+                    <a href="#" class="teaware__product-name">I’m here for the tea mug</a>
+                    <span class="teaware__product--price">$15.00</span>
+
+                </div>
+                <div class="teaware__product">
+                    <div class="teaware__product-link">
+                        <a href="#" class="ss-trend__product-item ss-trend__product-item--origin"
+                            style="background-image: url(https://static.wixstatic.com/media/f60b07_059fe9436084489a949135e430fa40f8~mv2.png/v1/fill/w_420,h_420,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f60b07_059fe9436084489a949135e430fa40f8~mv2.png);"></a>
+                        <a href="#" class="ss-trend__product-item ss-trend__product-item--alt"
+                            style="background-image: url(https://static.wixstatic.com/media/92cbbe_c1d6fdad82874e57b0e03a52f2fd1fed~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_c1d6fdad82874e57b0e03a52f2fd1fed~mv2.jpg);"></a>
+                    </div>
+
+                    <a href="#" class="teaware__product-name">Mind My Business Enamel Mug</a>
+                    <span class="teaware__product--price">$19.99</span>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <!-- end of shop teaware page -->
+    <!-- our story page-->
+
+    <div id="Our Story" class="ourstory-page content">
+        <div class="shop__header story-page__header">
+            <div class="shop__header-text story__page__header-text">
+                <h2 class="shop__header-text-title story__page__header-text-title">
+
+                    The Sabinea Story
+
+
+                </h2>
+                <p class="shop__header-text-text story__page__header-text-text">
+                    A flavorful and ever-evolving experience.
+                </p>
+            </div>
+            <div class="shop__header-img story__page__header-img">
+
+            </div>
+        </div>
+        <div class="story-page__body">
+            <div class="story-owner ourstory">
+                <div class="story-owner__img story__img">
+                    <img class=""
+                        src="https://static.wixstatic.com/media/f60b07_c894726d0b7f40fd9aba26b63fc60272~mv2.png/v1/crop/x_0,y_85,w_1144,h_763/fill/w_385,h_255,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Screen%20Shot%202022-11-02%20at%2012_08_35%20AM.png"
+                        alt="">
+                    <div class="story-owner-name">
+                        <p class="story-owner-name-name"><strong>Valda Blackmoore</strong>
+
+
+                        </p>
+                        <p class="story-owner-name-detail">Founder of Sabinea Blends, Law Grad, Devoted Wife & Mom</p>
+                    </div>
+
+                </div>
+                <div class="story-owner__story story-para">
+
+                    <p class="story-owner__story-text story-para-text">Sabinea Blends is the creation of Valda
+                        Blackmoore, a native of
+                        Dominica, the nature island of the Caribbean.
+                        Valda grew up on natural teas and spices, fresh from her grandmother's backyard garden.
+                        Daily home-cooked meals were always packed with flavor from the various herbs and spices used in
+                        the recipes.
+                        The day always ended with some kind of herbal tea, usually from leaves picked fresh from the
+                        many trees and plants in the backyard.
+
+                    </p>
+
+
+                </div>
+            </div>
+            <div class="story-country ourstory">
+
+                <div class="story-country__paragraph story-para">
+
+                    <p class="story-country__paragraph-text story-para-text">Naturally, spices and herbs are part and
+                        parcel of all
+                        seasoning and herbal blends created by Valda. Creating her own line of herbal teas and seasoning
+                        blends
+                        was an organic step in developing her brand.
+
+
+
+
+
+
+
+                    </p>
+                    <p class="story-country__paragraph-text story-para-text">
+
+
+
+                        Sabinea Blends brings the flavors of the Caribbean to your kitchen, be it through seasoning
+                        blends, herbal teas and other beverages. The goal is to satisfy our customers by offering our
+                        first-rate products and exceptional customer service.
+
+
+
+                    </p>
+                    <p class="story-country__paragraph-text story-para-text">
+
+
+
+
+
+
+
+                        We hope you drop in and shop with us soon!</p>
+
+                </div>
+                <div class="story-country__img story__img">
+                    <img src="https://static.wixstatic.com/media/f60b07_7eb637622ceb40ab93d6cb2a56af37f6~mv2.jpg/v1/fill/w_384,h_255,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/630x355.jpg"
+                        alt="">
+                    <p class="story-country-detail">Dominica, The Nature Island of the Carribbean</p>
+                </div>
+
+            </div>
+            <a href="#" class="shopnow__link" onclick="openSignupForm()">Sign up</a>
+           
+        </div>
+    </div>
+    <!-- end of story page -->
+
+    <!-- Loyalty program page -->
+    <div id="Loyalty Program" class="loyalty-page content">
+        <div class="loyalty-page__header">
+            <div class="loyalty-page__header-text">
+                <h2 class="loyalty-page__header-title">Sabinea Perks
+                    </h2>
+                <p class="loyalty-page__header-text">Shop our herbal tea store to earn points and turn them into rewards.</h3>
+                    <a href="#" class="loyalty-page__header-link" onclick="openSignupForm()">Become a member</a>
                 
-                    <div class="home-product-item">
-
-                        <a href="#" class="home-product-item__img"
-                            style="background-image: url(https://static.wixstatic.com/media/f60b07_e77a244105cf457e83cd11c75adae9e8~mv2.jpg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/f60b07_e77a244105cf457e83cd11c75adae9e8~mv2.jpg);"></a>
-                        <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
-                        <div class="home-product-item__price">
-                            <span class="home-product-item__price-old"> 696 Kc</span>
-                            <span class="home-product-item__price-new"> 969 Kc</span>
-                        </div>
-                        <div class="home-product-item__action">
-                            <span class="home-product-item__like home-product-item__like--liked">
-                                <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
-                                <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
-                            </span>
-
-                            <div class="home-product-item__rating">
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-
-                            <span class="home-product-item__sold">69 sold</span>
-
-
-                        </div>
-                        <div class="home-product-item__origin">
-                            <span class="home-product-item__brand">Luxury</span>
-                            <span class="home-product-item__origin-country">Vietnam</span>
-                        </div>
-                        <div class="home-product-item__favourite">
-                            <i class="fa-solid fa-check"></i>
-                            Favourited
-                        </div>
-                        <div class="home-product-item__sale-off">
-                            <span class="home-product-item__sale-off-percent">10%</span>
-                            <span class="home-product-item__sale-off-label">DISCOUNT</span>
-                        </div>
-                    </div>
-
-
-                    <div class="home-product-item">
-
-                        <a href="#" class="home-product-item__img"
-                            style="background-image: url(https://static.wixstatic.com/media/f60b07_7ac36a0e92c34361abf58559ff1975e7~mv2.jpg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/f60b07_7ac36a0e92c34361abf58559ff1975e7~mv2.jpg);"></a>
-                        <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
-                        <div class="home-product-item__price">
-                            <span class="home-product-item__price-old"> 696 Kc</span>
-                            <span class="home-product-item__price-new"> 969 Kc</span>
-                        </div>
-                        <div class="home-product-item__action">
-                            <span class="home-product-item__like home-product-item__like--liked">
-                                <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
-                                <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
-                            </span>
-
-                            <div class="home-product-item__rating">
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-
-                            <span class="home-product-item__sold">69 sold</span>
-
-
-                        </div>
-                        <div class="home-product-item__origin">
-                            <span class="home-product-item__brand">Luxury</span>
-                            <span class="home-product-item__origin-country">Vietnam</span>
-                        </div>
-                        <div class="home-product-item__favourite">
-                            <i class="fa-solid fa-check"></i>
-                            Favourited
-                        </div>
-                        <div class="home-product-item__sale-off">
-                            <span class="home-product-item__sale-off-percent">10%</span>
-                            <span class="home-product-item__sale-off-label">DISCOUNT</span>
-                        </div>
-                    </div>
-
-
-                    <div class="home-product-item">
-
-                        <a href="#" class="home-product-item__img"
-                            style="background-image: url(https://static.wixstatic.com/media/f60b07_6d2a1e66dda242ed81a65317a88be103~mv2.jpg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/f60b07_6d2a1e66dda242ed81a65317a88be103~mv2.jpg);"></a>
-                        <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
-                        <div class="home-product-item__price">
-                            <span class="home-product-item__price-old"> 696 Kc</span>
-                            <span class="home-product-item__price-new"> 969 Kc</span>
-                        </div>
-                        <div class="home-product-item__action">
-                            <span class="home-product-item__like home-product-item__like--liked">
-                                <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
-                                <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
-                            </span>
-
-                            <div class="home-product-item__rating">
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-
-                            <span class="home-product-item__sold">69 sold</span>
-
-
-                        </div>
-                        <div class="home-product-item__origin">
-                            <span class="home-product-item__brand">Luxury</span>
-                            <span class="home-product-item__origin-country">Vietnam</span>
-                        </div>
-                        <div class="home-product-item__favourite">
-                            <i class="fa-solid fa-check"></i>
-                            Favourited
-                        </div>
-                        <div class="home-product-item__sale-off">
-                            <span class="home-product-item__sale-off-percent">10%</span>
-                            <span class="home-product-item__sale-off-label">DISCOUNT</span>
-                        </div>
-                    </div>
-
-
-                    <div class="home-product-item">
-
-                        <a href="#" class="home-product-item__img"
-                            style="background-image: url(https://static.wixstatic.com/media/92cbbe_0356016ce8ab4f148b06e1d0bf4bd2bf~mv2.jpeg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_0356016ce8ab4f148b06e1d0bf4bd2bf~mv2.jpeg);"></a>
-                        <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
-                        <div class="home-product-item__price">
-                            <span class="home-product-item__price-old"> 696 Kc</span>
-                            <span class="home-product-item__price-new"> 969 Kc</span>
-                        </div>
-                        <div class="home-product-item__action">
-                            <span class="home-product-item__like home-product-item__like--liked">
-                                <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
-                                <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
-                            </span>
-
-                            <div class="home-product-item__rating">
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-
-                            <span class="home-product-item__sold">69 sold</span>
-
-
-                        </div>
-                        <div class="home-product-item__origin">
-                            <span class="home-product-item__brand">Luxury</span>
-                            <span class="home-product-item__origin-country">Vietnam</span>
-                        </div>
-                        <div class="home-product-item__favourite">
-                            <i class="fa-solid fa-check"></i>
-                            Favourited
-                        </div>
-                        <div class="home-product-item__sale-off">
-                            <span class="home-product-item__sale-off-percent">10%</span>
-                            <span class="home-product-item__sale-off-label">DISCOUNT</span>
-                        </div>
-                    </div>
-
-
-                    <div class="home-product-item">
-
-                        <a href="#" class="home-product-item__img"
-                            style="background-image: url(https://static.wixstatic.com/media/f60b07_320f2dc913104921a3d2972593ad8cef~mv2.png/v1/fill/w_281,h_281,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f60b07_320f2dc913104921a3d2972593ad8cef~mv2.png);"></a>
-                        <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
-                        <div class="home-product-item__price">
-                            <span class="home-product-item__price-old"> 696 Kc</span>
-                            <span class="home-product-item__price-new"> 969 Kc</span>
-                        </div>
-                        <div class="home-product-item__action">
-                            <span class="home-product-item__like home-product-item__like--liked">
-                                <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
-                                <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
-                            </span>
-
-                            <div class="home-product-item__rating">
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-
-                            <span class="home-product-item__sold">69 sold</span>
-
-
-                        </div>
-                        <div class="home-product-item__origin">
-                            <span class="home-product-item__brand">Luxury</span>
-                            <span class="home-product-item__origin-country">Vietnam</span>
-                        </div>
-                        <div class="home-product-item__favourite">
-                            <i class="fa-solid fa-check"></i>
-                            Favourited
-                        </div>
-                        <div class="home-product-item__sale-off">
-                            <span class="home-product-item__sale-off-percent">10%</span>
-                            <span class="home-product-item__sale-off-label">DISCOUNT</span>
-                        </div>
-                    </div>
-
-
-                    <div class="home-product-item">
-
-                        <a href="#" class="home-product-item__img"
-                            style="background-image: url(https://static.wixstatic.com/media/92cbbe_30eaf9333372401a84ad58c6695a0837~mv2.jpg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_30eaf9333372401a84ad58c6695a0837~mv2.jpg);"></a>
-                        <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
-                        <div class="home-product-item__price">
-                            <span class="home-product-item__price-old"> 696 Kc</span>
-                            <span class="home-product-item__price-new"> 969 Kc</span>
-                        </div>
-                        <div class="home-product-item__action">
-                            <span class="home-product-item__like home-product-item__like--liked">
-                                <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
-                                <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
-                            </span>
-
-                            <div class="home-product-item__rating">
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-
-                            <span class="home-product-item__sold">69 sold</span>
-
-
-                        </div>
-                        <div class="home-product-item__origin">
-                            <span class="home-product-item__brand">Luxury</span>
-                            <span class="home-product-item__origin-country">Vietnam</span>
-                        </div>
-                        <div class="home-product-item__favourite">
-                            <i class="fa-solid fa-check"></i>
-                            Favourited
-                        </div>
-                        <div class="home-product-item__sale-off">
-                            <span class="home-product-item__sale-off-percent">10%</span>
-                            <span class="home-product-item__sale-off-label">DISCOUNT</span>
-                        </div>
-                    </div>
-
-
-                    <div class="home-product-item">
-
-                        <a href="#" class="home-product-item__img"
-                            style="background-image: url(https://static.wixstatic.com/media/92cbbe_a541940c67b545faaf7407f2dc3963bc~mv2.jpg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_a541940c67b545faaf7407f2dc3963bc~mv2.jpg);"></a>
-                        <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
-                        <div class="home-product-item__price">
-                            <span class="home-product-item__price-old"> 696 Kc</span>
-                            <span class="home-product-item__price-new"> 969 Kc</span>
-                        </div>
-                        <div class="home-product-item__action">
-                            <span class="home-product-item__like home-product-item__like--liked">
-                                <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
-                                <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
-                            </span>
-
-                            <div class="home-product-item__rating">
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-
-                            <span class="home-product-item__sold">69 sold</span>
-
-
-                        </div>
-                        <div class="home-product-item__origin">
-                            <span class="home-product-item__brand">Luxury</span>
-                            <span class="home-product-item__origin-country">Vietnam</span>
-                        </div>
-                        <div class="home-product-item__favourite">
-                            <i class="fa-solid fa-check"></i>
-                            Favourited
-                        </div>
-                        <div class="home-product-item__sale-off">
-                            <span class="home-product-item__sale-off-percent">10%</span>
-                            <span class="home-product-item__sale-off-label">DISCOUNT</span>
-                        </div>
-                    </div>
-
-
-                    <div class="home-product-item">
-
-                        <a href="#" class="home-product-item__img"
-                            style="background-image: url(https://static.wixstatic.com/media/92cbbe_d5c1f333bef44a77ab184682164ee280~mv2.jpg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_d5c1f333bef44a77ab184682164ee280~mv2.jpg);"></a>
-                        <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
-                        <div class="home-product-item__price">
-                            <span class="home-product-item__price-old"> 696 Kc</span>
-                            <span class="home-product-item__price-new"> 969 Kc</span>
-                        </div>
-                        <div class="home-product-item__action">
-                            <span class="home-product-item__like home-product-item__like--liked">
-                                <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
-                                <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
-                            </span>
-
-                            <div class="home-product-item__rating">
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-
-                            <span class="home-product-item__sold">69 sold</span>
-
-
-                        </div>
-                        <div class="home-product-item__origin">
-                            <span class="home-product-item__brand">Luxury</span>
-                            <span class="home-product-item__origin-country">Vietnam</span>
-                        </div>
-                        <div class="home-product-item__favourite">
-                            <i class="fa-solid fa-check"></i>
-                            Favourited
-                        </div>
-                        <div class="home-product-item__sale-off">
-                            <span class="home-product-item__sale-off-percent">10%</span>
-                            <span class="home-product-item__sale-off-label">DISCOUNT</span>
-                        </div>
-                    </div>
-
-
-                    <div class="home-product-item">
-
-                        <a href="#" class="home-product-item__img"
-                            style="background-image: url(https://static.wixstatic.com/media/92cbbe_6812fb3e48ff4fa2947e878313024a60~mv2.jpg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_6812fb3e48ff4fa2947e878313024a60~mv2.jpg);"></a>
-                        <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
-                        <div class="home-product-item__price">
-                            <span class="home-product-item__price-old"> 696 Kc</span>
-                            <span class="home-product-item__price-new"> 969 Kc</span>
-                        </div>
-                        <div class="home-product-item__action">
-                            <span class="home-product-item__like home-product-item__like--liked">
-                                <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
-                                <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
-                            </span>
-
-                            <div class="home-product-item__rating">
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-
-                            <span class="home-product-item__sold">69 sold</span>
-
-
-                        </div>
-                        <div class="home-product-item__origin">
-                            <span class="home-product-item__brand">Luxury</span>
-                            <span class="home-product-item__origin-country">Vietnam</span>
-                        </div>
-                        <div class="home-product-item__favourite">
-                            <i class="fa-solid fa-check"></i>
-                            Favourited
-                        </div>
-                        <div class="home-product-item__sale-off">
-                            <span class="home-product-item__sale-off-percent">10%</span>
-                            <span class="home-product-item__sale-off-label">DISCOUNT</span>
-                        </div>
-                    </div>
-
-
-                    <div class="home-product-item">
-
-                        <a href="#" class="home-product-item__img"
-                            style="background-image: url(https://static.wixstatic.com/media/92cbbe_e333cca1f95147088ae58329e2ef17ad~mv2.jpg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_e333cca1f95147088ae58329e2ef17ad~mv2.jpg);"></a>
-                        <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
-                        <div class="home-product-item__price">
-                            <span class="home-product-item__price-old"> 696 Kc</span>
-                            <span class="home-product-item__price-new"> 969 Kc</span>
-                        </div>
-                        <div class="home-product-item__action">
-                            <span class="home-product-item__like home-product-item__like--liked">
-                                <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
-                                <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
-                            </span>
-
-                            <div class="home-product-item__rating">
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-
-                            <span class="home-product-item__sold">69 sold</span>
-
-
-                        </div>
-                        <div class="home-product-item__origin">
-                            <span class="home-product-item__brand">Luxury</span>
-                            <span class="home-product-item__origin-country">Vietnam</span>
-                        </div>
-                        <div class="home-product-item__favourite">
-                            <i class="fa-solid fa-check"></i>
-                            Favourited
-                        </div>
-                        <div class="home-product-item__sale-off">
-                            <span class="home-product-item__sale-off-percent">10%</span>
-                            <span class="home-product-item__sale-off-label">DISCOUNT</span>
-                        </div>
-                    </div>
-
-
-                    <div class="home-product-item">
-
-                        <a href="#" class="home-product-item__img"
-                            style="background-image: url(https://static.wixstatic.com/media/92cbbe_e63b68959a614d63b32d69b98d970bd9~mv2.jpg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_e63b68959a614d63b32d69b98d970bd9~mv2.jpg);"></a>
-                        <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
-                        <div class="home-product-item__price">
-                            <span class="home-product-item__price-old"> 696 Kc</span>
-                            <span class="home-product-item__price-new"> 969 Kc</span>
-                        </div>
-                        <div class="home-product-item__action">
-                            <span class="home-product-item__like home-product-item__like--liked">
-                                <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
-                                <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
-                            </span>
-
-                            <div class="home-product-item__rating">
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-
-                            <span class="home-product-item__sold">69 sold</span>
-
-
-                        </div>
-                        <div class="home-product-item__origin">
-                            <span class="home-product-item__brand">Luxury</span>
-                            <span class="home-product-item__origin-country">Vietnam</span>
-                        </div>
-                        <div class="home-product-item__favourite">
-                            <i class="fa-solid fa-check"></i>
-                            Favourited
-                        </div>
-                        <div class="home-product-item__sale-off">
-                            <span class="home-product-item__sale-off-percent">10%</span>
-                            <span class="home-product-item__sale-off-label">DISCOUNT</span>
-                        </div>
-                    </div>
-
-
-                    <div class="home-product-item">
-
-                        <a href="#" class="home-product-item__img"
-                            style="background-image: url(https://static.wixstatic.com/media/92cbbe_b51daf4feafb4a52a9cb3bda78bec6c1~mv2.jpg/v1/fill/w_281,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/92cbbe_b51daf4feafb4a52a9cb3bda78bec6c1~mv2.jpg);"></a>
-                        <h4 class="home-product-item__name">Pumpkin Pie Style</h4>
-                        <div class="home-product-item__price">
-                            <span class="home-product-item__price-old"> 696 Kc</span>
-                            <span class="home-product-item__price-new"> 969 Kc</span>
-                        </div>
-                        <div class="home-product-item__action">
-                            <span class="home-product-item__like home-product-item__like--liked">
-                                <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
-                                <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
-                            </span>
-
-                            <div class="home-product-item__rating">
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-
-                            <span class="home-product-item__sold">69 sold</span>
-
-
-                        </div>
-                        <div class="home-product-item__origin">
-                            <span class="home-product-item__brand">Luxury</span>
-                            <span class="home-product-item__origin-country">Vietnam</span>
-                        </div>
-                        <div class="home-product-item__favourite">
-                            <i class="fa-solid fa-check"></i>
-                            Favourited
-                        </div>
-                        <div class="home-product-item__sale-off">
-                            <span class="home-product-item__sale-off-percent">10%</span>
-                            <span class="home-product-item__sale-off-label">DISCOUNT</span>
-                        </div>
-                    </div>
-
+              </div>
+        </div>
+        <div class="loyalty-page__body">
+            <div class="loyalty-page__step">
+                <span class="loyalty-page__step-step">01</span>
+                <h3 class="loyalty-page__step-title">Sign up</h3>
+                <p class="loyalty-page__step-text">Sign up as a member to start enjoying the loyalty program</p>
+            </div>
+            <div class="loyalty-page__step">
+                <span class="loyalty-page__step-step">02</span>
+                <h3 class="loyalty-page__step-title">earn points</h3>
+                <p class="loyalty-page__step-text">Purchase a product
+
+                    Get 5 Stars for every $1 spent
                     
-
-               
-                
+                    </p>
+                    <p class="loyalty-page__step-text">
+                        
+                        Sign up to the site
+                        
+                        Get 50 Stars</p>
+            </div>
+            <div class="loyalty-page__step">
+                <span class="loyalty-page__step-step">03</span>
+                <h3 class="loyalty-page__step-title">Redeem Rewards</h3>
                 
             </div>
         </div>
     </div>
-    <!-- end of shop tea page -->
+    <!-- end of loyalty program page -->
+    <!-- start of blog page -->
+    <div id="Blog" class="blog-page content">
+        <div class="blog-page__header">
+            <div class="blog-page__header-para">
+                <h3 class="blog-page__header-title">Get the tea
+                </h3>
+                <div class="blog-page__header-text">
+                    <p class="">
+                        Welcome to our herbal tea blog! Here you will find all sorts of interesting information about the world of herbal teas. 
+                        
+                    </p>
+                    <p class="">Whether you are an experience herbal tea drinker, just getting started or somewhere in between, you'll be sure to find something here that will make your tea time even more enjoyable.
+                         </p>
+                         <p>Thanks for stopping by!</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="blog-page__body">
+            <div class="blog-page__body-searchbar">
+                <a href="" class="blog-page__body-searchbar--link">All posts</a>
+                <i class="blog-page__body-searchbar--search fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="blog-page__body-grid">
+                
+
+                    <div class="blog-page__body-grid-item">
+                        <a href="#" class="blog-page__body-grid-item-link"
+                            style="background-image: url(https://static.wixstatic.com/media/nsplsh_a082e75541a243a885c3e103a5ef3d4d~mv2.jpg/v1/fill/w_304,h_228,fp_0.50_0.50,q_90,enc_auto/nsplsh_a082e75541a243a885c3e103a5ef3d4d~mv2.jpg);"></a>
+        
+                        <a href="#" class="blog-page__body-grid-name">Fight Back Against Seasonal Allergies: Tips and Tricks for
+                            a Clearer Spring</a>
+                            <p class="blog-page__body-grid-text">Spring is well underway and many of us are still looking for ways to combat seasonal allergies. Congestion, runny noses, itchy eyes and...</p>
+        
+                    </div>
+                    <div class="blog-page__body-grid-item">
+                        <a href="#" class="blog-page__body-grid-item-link"
+                            style="background-image: url(https://static.wixstatic.com/media/11062b_4a98c7e597b2475db01d435b3c9d7e72~mv2.jpg/v1/fill/w_304,h_228,fp_0.50_0.50,q_90,enc_auto/11062b_4a98c7e597b2475db01d435b3c9d7e72~mv2.jpg);"></a>
+        
+                        <a href="#" class="blog-page__body-grid-name">Herbal Tea: A Calming Solution</a>
+                        <p class="blog-page__body-grid-text">We’ve all heard the phrase “there’s an herbal tea for that” – but do you ever stop to wonder what and why that herbal tea is suggested...</p>
+                    </div>
+                    <div class="blog-page__body-grid-item">
+                        <a href="#" class="blog-page__body-grid-item-link"
+                            style="background-image: url(https://static.wixstatic.com/media/92cbbe_5a71947ee7804ddd8f366fd3a46d15b3~mv2.jpg/v1/fill/w_303,h_228,fp_0.50_0.50,q_90,enc_auto/92cbbe_5a71947ee7804ddd8f366fd3a46d15b3~mv2.jpg);"></a>
+        
+                        <a href="#" class="blog-page__body-grid-name">The Wonders of Ginger Tea</a>
+                        <p class="blog-page__body-grid-text">Ginger tea has, for centuries, been celebrated for its countless health benefits and has long been praised as a magical drink that can...</p>
+                    </div>
+                    <div class="blog-page__body-grid-item">
+                        <a href="#" class="blog-page__body-grid-item-link"
+                            style="background-image: url(https://static.wixstatic.com/media/f60b07_719c99bf9b6840ccaac98a53b94d5dd7~mv2.png/v1/fill/w_454,h_341,fp_0.50_0.50,q_95,enc_auto/f60b07_719c99bf9b6840ccaac98a53b94d5dd7~mv2.png);"></a>
+        
+                        <a href="#" class="blog-page__body-grid-name">Myth or Real Magic: Do Slimming Teas Work?</a>
+                        <p class="blog-page__body-grid-text">According to the labels on many popular slimming or weight-loss teas, the tea’s ingredients offer its drinkers benefits that are hard to...</p>
+                    </div>
+                    <div class="blog-page__body-grid-item">
+                        <a href="#" class="blog-page__body-grid-item-link"
+                            style="background-image: url(https://static.wixstatic.com/media/11062b_c8390cba0abe450ba01d38a23bcac04b~mv2.jpg/v1/fill/w_454,h_341,fp_0.50_0.50,q_90,enc_auto/11062b_c8390cba0abe450ba01d38a23bcac04b~mv2.jpg);"></a>
+        
+                        <a href="#" class="blog-page__body-grid-name">Wake Up to These Herbal Teas for Productivity at Work or Home
+
+                            </a>
+                            <p class="blog-page__body-grid-text">If you’re tired of dealing with the caffeine crash caused by your morning coffee that leaves you feeling sluggish and foggy in the...</p>
+        
+                    </div>
+                    <div class="blog-page__body-grid-item">
+                        <a href="#" class="blog-page__body-grid-item-link"
+                            style="background-image: url(https://static.wixstatic.com/media/f60b07_6e069ea58dba43a592dba4b57e7072d0~mv2.png/v1/fill/w_454,h_341,fp_0.50_0.50,q_95,enc_auto/f60b07_6e069ea58dba43a592dba4b57e7072d0~mv2.png);"></a>
+        
+                        <a href="#" class="blog-page__body-grid-name">Do Herbs Really Help With Wellness? Are They Safe?
+
+                            </a>
+                            <p class="blog-page__body-grid-text">Naturally, spices and herbs are present in Sabinea Blend's seasoning and herbal blends. But, what are these herbs really? And do they...</p>
+        
+                    </div>
+                    <div class="blog-page__body-grid-item">
+                        <a href="#" class="blog-page__body-grid-item-link"
+                            style="background-image: url(https://static.wixstatic.com/media/92cbbe_5689dc785f2842f8998c357897f6ecff~mv2.png/v1/fill/w_454,h_341,fp_0.50_0.50,q_95,enc_auto/92cbbe_5689dc785f2842f8998c357897f6ecff~mv2.png);"></a>
+        
+                        <a href="#" class="blog-page__body-grid-name">What is Accessible Wellness?
+
+                            </a>
+                            <p class="blog-page__body-grid-text">At Sabinea Blends, we constantly talk about accessible wellness. But what exactly is accessible wellness? We define Accessible Wellness...</p>
+        
+                    </div>
+                    <div class="blog-page__body-grid-item">
+                        <a href="#" class="blog-page__body-grid-item-link"
+                            style="background-image: url(https://static.wixstatic.com/media/92cbbe_45e76675d88f467da4ebb5b4c29f5cac~mv2.png/v1/fill/w_454,h_341,fp_0.50_0.50,q_95,enc_auto/92cbbe_45e76675d88f467da4ebb5b4c29f5cac~mv2.png);"></a>
+        
+                        <a href="#" class="blog-page__body-grid-name">Prioritizing Self-care During the Covid-19 Pandemic
+
+                            </a>
+                            <p class="blog-page__body-grid-text">Welcome to the first blog post on Sabineablends.com! Here, we will provide you with information and education on all things herbal tea...</p>
+        
+                    </div>
+                    
+                   
+            </div>
+        </div>
+
+    </div>
+    <!-- end of blog page -->
+
+    <!-- start of contact page -->
+    <div id="Contact" class="contact-page content">
+        <div class="shop__header contact-page__header">
+            <div class="shop__header-text contact-page__header-text">
+                <h2 class="shop__header-text-title contact-page__header-text-title">
+
+                    Give us a shout!
+
+
+                </h2>
+                <p class="shop__header-text-text contact-page__header-text-text">
+                    For general inquiries or questions about our herbal teas, please get in touch with us.
+                </p>
+            </div>
+            <div class="shop__header-img contact-page__header-img">
+
+            </div>
+        </div>
+        <div class="contact-page__body">
+            <div class="contact-page__body--info">
+                <h2 class="contact-page__body-title">Contact Information</h2>
+                <span class="contact-contact">3721 New Macland Rd. Suite 200-325
+                    Powder Springs, GA 30127
+                    
+                    </span>
+                <span class="contact-contact">anhtandeptraivcc@gmail.com</span>
+                <span class="contact-contact">
+                    
+                    (470) 745-4TEA (4832)</span>
+                    <div class="contact-contact-social">
+                        <i class="contact-contact-social-icon fa-brands fa-facebook"></i>
+                        <i class="contact-contact-social-icon fa-brands fa-instagram"></i>
+        
+                    </div>
+
+            </div>
+            <div class="contact-page__body--contact">
+                <div class="contact-page__block">
+                    <input type="text" class="contact-page__input-half" placeholder="Name">
+                     <input type="text" class="contact-page__input-half" placeholder="Email">
+                </div>
+                <div class="contact-page__block">
+                    <input type="text" class="contact-page__input-half" placeholder="Phone">
+                    <input type="text" class="contact-page__input-half" placeholder="Address">
+                </div>
+                <input type="text" class="contact-page__subject" placeholder="Subject">
+                <input type="text" class="contact-page__msg" placeholder="Type your message here ...">
+                <a href="" class="contact-page__submitlink">Submit</a>
+
+            </div>
+        </div>
+    </div>
+    <!-- end of contact page -->
+
 
     <footer class="footer">
         <div class="footer__name">
             <div class="footer__name-logo">
 
             </div>
-            <span class="footer__name-text">1234 New Heavan, Vitexne namesti, Praha, Czech Rep.</span>
+            <span class="footer__name-text">1234 New Heaven, Vitexne namesti, Praha, Czech Rep.</span>
             <span class="footer__name-text">anhtandeptraivl@gmail.com</span>
             <span class="footer__name-text">© 2023 Copyright</span>
 
@@ -998,15 +1437,15 @@
             <h2 class="footer-col-title">Customer Support</h2>
             <a href="#" class="footer-col-link">Shipping and Returns
 
-                </a>
+            </a>
             <a href="#" class="footer-col-link">Loyalty Program
-                </a>
+            </a>
             <a href="#" class="footer-col-link">
                 Terms of Use
-                
-                </a>
-                <a href="#" class="footer-col-link">Privacy Policy
-                </a>
+
+            </a>
+            <a href="#" class="footer-col-link">Privacy Policy
+            </a>
         </div>
         <div class="footer__sub">
             <h2 class="footer-col-title">Subscribe To Our Newsletter</h2>
@@ -1016,7 +1455,7 @@
             </div>
         </div>
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
 
